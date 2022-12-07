@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+   
+}
+.header{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #ad2a3e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+}
+
+.cajalogomenu{
+    padding: 2px 2px;
+}
+img{
+    width: 97%;
+    border-radius: 50%;
+}
+
+.ulmenu, .ulsubmenu{
+    list-style: none;
+
+}
+.menuh{
+    display: none;
+}
+
+.limenu .alink, .aPasublink{
+    color:#fff;
+    padding: 4px 19px 4px 19px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+.ulmenu{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    background: #ad2a3e;
+    width: 100%;
+   
+}
+.licontainer_submenu{
+    position: relative;
+}
+.ulsubmenu{
+    position: absolute;
+   
+    width: 240px;
+    top:37.6px;
+    z-index: 1000;
+    display: none;
+    
+}
+.licontainer_submenu:hover .ulsubmenu{
+    display: block;
+}
+.licontainer_submenu:hover .ulsubmenu.hide{
+    display: none;
+}
+
+.ulsubmenu .limenu{
+    margin: 0px;
+    width: 100%;
+    padding: 5px 17px;
+    background: #ad2a3e;
+   
+}
+.alink:hover, .aPasublink:hover{
+    background: #9B0B1C;
+    padding: 14px 19px;
+    width: 100%;
+}
+.asublink:hover{
+    background: none;
+}
+.ulsubmenu .limenu:hover{
+    background: #9B0B1C;
+}
+
+@media(max-width:768px){
+    html{
+        width:100%;
+       
+    }
+    header{
+        background: #ad2a3e;
+        width: 100%;
+    }
+    header .cajalogomenu img{
+        padding: 2px;
+      
+    }
+    .menuh{
+        display: initial;
+        color: #fff;
+        margin: 0;
+        margin-right: 4px;
+        border: solid rgb(204, 218, 216);
+        cursor: pointer;
+        font-size: 2rem;
+        width: 7%;
+        align-items: center;
+        background: #fff;
+    }
+    header .navmenu{
+        width: 100%;
+    }
+
+    .ulmenu{
+        display: block;
+        width: 100%;
+        position: absolute;
+        max-height: 500px;
+        top: 50px;
+        overflow-y: scroll;
+      
+        left: 0px;
+        margin-left: -100%;
+        transition: all .5s;
+
+    }
+    .ulmenu.mostrar{
+        margin-left: 0%
+    }
+
+
+
+
+   .limenu{
+    background: #adad;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  
+   }
+   .alink, .aPasublink{
+    display: block;
+    font-size: 1.2rem;
+    margin: .1px;
+    padding: 8px 5px;
+   
+   }
+   .ulsubmenu{
+    height: 0px;
+    width: 100%;
+    margin: .1px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    transition: all .5s;
+
+   }
+   .ulsubmenu.reduced{
+    height: 0px;
+   }
+   .alink:hover{
+    background: #9B0B1C;
+    margin: .1px;
+    padding: 4px;
+   }
+   .aPasublink:hover{
+    background: #9B0B1C;
+    margin: .1px;
+    padding: 8px;
+   }
+
+   .ulsubmenu .limenu:hover{
+    background: #ad2a;
+   }
+
+}
